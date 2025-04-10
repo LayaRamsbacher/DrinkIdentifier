@@ -19,6 +19,54 @@
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+
+# Maven 
+.mvn/
+target/
+
+# Maven release and backup files
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+
+
+# Java class files and packaged binaries
+*.class
+*.jar
+*.war
+*.ear
+
+# Generated log files, error reports, and temporary files
+*.log
 hs_err_pid*
-replay_pid*
+
+# Generic temporary files
+*.tmp
+
+
+
+#IntelliJ IDEA and vscode
+.idea/
+*.iml
+out/
+.vscode/
+
+
+# OS-specific files
+
+## macOS
+.DS_Store
+
+## Windows
+Thumbs.db
+ehthumbs.db
+
+# Additional files to ignore
+
+## Application-specific files or runtime logs
+*.swp
+*.swo

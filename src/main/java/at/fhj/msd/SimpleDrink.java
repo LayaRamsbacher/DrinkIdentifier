@@ -1,4 +1,4 @@
-package at.fhj.iit;
+package at.fhj.msd;
 /**
  * Class represents a simple drink liquid which can be used in
  * drinks

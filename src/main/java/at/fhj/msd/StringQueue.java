@@ -27,20 +27,19 @@ public class StringQueue implements IQueue {
     }
 
     @Override
-    public String poll() {
-        String element = peek();
+  public String poll() {
+    String element = peek();
 
-        if (!elements.isEmpty()) {
-            elements.remove(0);
-        }
-
-        return element;
+    if (!elements.isEmpty()) {
+      elements.remove(0);
     }
+
+    return element;
+  }
 
     @Override
     public String remove() {
         String element = poll();
-        //element = "";
         if (element == null) {
             throw new NoSuchElementException("there's no element any more");
         }

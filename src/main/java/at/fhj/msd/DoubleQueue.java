@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 /**
+ * Similar to the StringQueue Class
  * DoubleQueue is a implementation of the IDoubleQueue and provides functionality to store and handle Double values in a queue.
  */
 public class DoubleQueue implements IDoubleQueue {
@@ -14,7 +15,7 @@ public class DoubleQueue implements IDoubleQueue {
 
     /**
      * Constructor for the DoubleQueue 
-     * It takes a List of Double Values as a Parameter as well as a maxSize Ineteger value as a Parameter (Default:5).
+     * It takes a maxSize Ineteger value as a Parameter (Default:5).
      *  @param int maxSize
      */
     public DoubleQueue(int maxSize) {

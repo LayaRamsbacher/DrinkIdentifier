@@ -54,7 +54,7 @@ Mit der ``SimpleDrink.java`` Klasse kann man ein SimpleDrink Objekt erstellen we
 <br>
 <br>
 
-- [ ] Den Branch ``drink`` erstellen und dort die Klasse ``Cocktail`` erstellen. Die soll das Interface Drink implementieren<br>
+- [X] Den Branch ``drink`` erstellen und dort die Klasse ``Cocktail`` erstellen. Die soll das Interface Drink implementieren<br>
 <u> Mitglied: **~Casper** </u>
 <br>
 <br>

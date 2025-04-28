@@ -15,17 +15,29 @@ public class Cocktail extends  Drink {
 
        @Override
        public double getVolume() {
-              return getVolume();
+              double summedvolume = 0;
+              for (Liquid l : liquid) {
+                     summedvolume += l.getVolume();
+              }
+              return summedvolume;
        }
 
        @Override
        public double getAlcoholPercent() {
-         return getAlcoholPercent();
+              double summedalcohol = 0;
+              for (Liquid l : liquid) {
+                     summedalcohol += l.getAlcoholPercent();
+              }
+              return summedalcohol / liquid.size();
        }
 
        @Override
        public boolean isAlcoholic() {
-                  return getAlcoholPercent() > 0;
+              double summedalcohol = 0;
+              for (Liquid l : liquid) {
+                     summedalcohol += l.getAlcoholPercent();
+              }
+                  return summedalcohol > 0;
        }
 
 

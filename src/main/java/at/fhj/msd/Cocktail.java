@@ -16,8 +16,6 @@ public class Cocktail extends  Drink {
         * and isAlcoholic is true if the average of the liquied in the list is greater than 0) 
         * @param name
         * @param liquid
-        
-           
        */
        public Cocktail(String name, List<Liquid> liquid) {
               super(name);

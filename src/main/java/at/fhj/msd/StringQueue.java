@@ -7,11 +7,17 @@ import java.util.NoSuchElementException;
 // there's some Bugs included, try to debug the code and fix the Bugs
 // there are different Bugs, wrong implementation, typos, ...
 // write Test-Cases (read Queue Interface for understanding methods) and use Debugging possibilies of your IDE
+
+
 public class StringQueue implements IQueue {
 
     private final List<String> elements = new ArrayList<String>();
     private int maxSize = 5;
 
+    /**
+     * 
+     * @param maxSize
+     */
     public StringQueue(int maxSize) {
         this.maxSize = maxSize;
     }

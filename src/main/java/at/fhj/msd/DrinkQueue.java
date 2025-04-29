@@ -48,8 +48,7 @@ public class DrinkQueue {
         if (elements.isEmpty()) {
             return null;
         }
-        elements.remove(0);
-        return elements.get(0);
+        return elements.remove(0);
     }
 
     /**
@@ -75,12 +74,10 @@ public class DrinkQueue {
      * @return the first drink in the queue or null if the queue is empty
      */
     public Drink peek() {
-        if (!elements.isEmpty()) {
+        if (elements.isEmpty()) {
             return null;
-        } else {
-            return elements.get(0);
         }
-
+        return elements.get(0);
     }
 
     /*

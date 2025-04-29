@@ -1,48 +1,72 @@
 package at.fhj.msd;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.Queue;
+import java.util.NoSuchElementException;
 
-public class DrinkQueue  {
+public class DrinkQueue {
 
-      private Queue<Drink> elements;
+    private LinkedList<Drink> elements;
+    int maxSize = 5;
 
-  public DrinkQueue() {
-      elements = new LinkedList<>();
-  }    
+    public DrinkQueue(int maxSize) {
+        elements = new LinkedList<>();
+        this.maxSize = maxSize;
+    }
 
-  public boolean offer(Drink obj)
-  {
-      return false;
-  }
+    public boolean offer(Drink obj) {
+        if (elements.size() >= this.maxSize) {                  //fixed an issue where 4 coulf fit into a maxsize of 3
+            return false;
+        } else {
+            elements.add(obj);
+            return true;
+        }
+    }
 
+    public Drink poll() {
+        if (elements.isEmpty()) {
+            return null;
+        }
+        return elements.poll();
+    }
 
-      
-  public String poll()
-  {
-      return "";
-  }
+    public Drink remove() {
 
- 
-     
-  public Drink remove()
-  {
+        Drink drink = poll();
+        if (drink == null) {
+            throw new NoSuchElementException("there's no element any more");
+        }
 
-    return elements.remove();
-      
-  }
+        return drink;
 
-   
-  public String peek()
-  {
-    return "";
-  }
+    }
 
-  
-  public String element()
-  {
-    return "";
-  }
+    public Drink peek() {
+        if (!elements.isEmpty()) {
+            return null;
+        } else {
+            return elements.get(0);
+        }
+
+    }
+
+    /*
+
+    this might be better?
+
+    public Drink peek() {
+        if (elements.isEmpty()) {
+            return null;
+        }
+        return elements.peek();
+    }
+     */
+
+    public Drink element() {
+        Drink drink = peek();
+        if (drink == null) {
+            throw new NoSuchElementException("there's no element any more");
+        }
+        return drink;
+    }
 
 }

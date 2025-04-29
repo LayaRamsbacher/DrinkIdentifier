@@ -14,7 +14,7 @@ public class DrinkQueue {
     }
 
     public boolean offer(Drink obj) {
-        if (elements.size() > this.maxSize) {
+        if (elements.size() >= this.maxSize) {                  //fixed an issue where 4 coulf fit into a maxsize of 3
             return false;
         } else {
             elements.add(obj);
@@ -23,7 +23,10 @@ public class DrinkQueue {
     }
 
     public Drink poll() {
-        return null;
+        if (elements.isEmpty()) {
+            return null;
+        }
+        return elements.poll();
     }
 
     public Drink remove() {
@@ -45,6 +48,18 @@ public class DrinkQueue {
         }
 
     }
+
+    /*
+
+    this might be better?
+
+    public Drink peek() {
+        if (elements.isEmpty()) {
+            return null;
+        }
+        return elements.peek();
+    }
+     */
 
     public Drink element() {
         Drink drink = peek();

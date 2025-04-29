@@ -13,12 +13,16 @@ public class StringQueue implements IQueue {
     private int maxSize = 5;
 
     public StringQueue(int maxSize) {
+
+        if (maxSize < 0) {
+            throw new IllegalArgumentException("Queue size must be 0 or greater!");
+        }
         this.maxSize = maxSize;
     }
 
     @Override
     public boolean offer(String obj) {
-        if (elements.size() != maxSize) {
+        if (elements.size() < maxSize) {
             elements.add(obj);
         } else {
             return false;

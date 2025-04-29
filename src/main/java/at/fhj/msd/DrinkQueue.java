@@ -14,25 +14,14 @@ public class DrinkQueue  {
 
   public boolean offer(Drink obj)
   {
-      if (elements.size() < maxSize) {
-          elements.add(obj);
-          return true;
-      } else {
-          return false;
-      }
+      return false;
   }
 
 
       
   public String poll()
   {
-      if (elements.isEmpty()) {
-              return null;
-      } else {
-          Drink firstElement = elements.get(0);
-          elements.remove(0);
-          return firstElement.toString();
-      }
+      return "";
   }
 
  
@@ -47,13 +36,13 @@ public class DrinkQueue  {
    
   public String peek()
   {
-
+    return "";
   }
 
   
   public String element()
   {
-
+    return "";
   }
 
 }

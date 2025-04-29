@@ -44,6 +44,13 @@ public class LiquidTest {
     }
 
     @Test
+    void testSetNameValid() {
+        Liquid l = new Liquid("Maggus", 0.3, 0.5);
+        l.setName("Casp");
+        assertEquals("Casp", l.getName());
+    }
+
+    @Test
     void testSetNameNull() {
         Liquid l = new Liquid("Maggus", 0.3, 0.5);
         assertThrows(IllegalArgumentException.class, () -> {
@@ -61,7 +68,14 @@ public class LiquidTest {
     }
 
     @Test
-    void testSetVolume() {
+    void testSetVolumeValid() {
+        Liquid l = new Liquid("Chianti", 1.0, 20.0);
+        l.setVolume(0.3);
+        assertEquals(0.3, l.getVolume());
+    }
+
+    @Test
+    void testSetVolumeInvalid() {
         Liquid l = new Liquid("Chianti", 1.0, 20.0);
 
         assertThrows(IllegalArgumentException.class, () -> {
@@ -70,7 +84,14 @@ public class LiquidTest {
     }
 
     @Test
-    void testSetAlcohol() {
+    void testSetAlcoholValid() {
+        Liquid l = new Liquid("Vermuth", 0.4, 55.0);
+        l.setAlcoholPercent(0.34);
+        assertEquals(0.34, l.getAlcoholPercent());
+    }
+
+    @Test
+    void testSetAlcoholInvalid() {
         Liquid l = new Liquid("Vermuth", 0.4, 55.0);
         assertThrows(IllegalArgumentException.class, () -> {
             l.setAlcoholPercent(102.0);

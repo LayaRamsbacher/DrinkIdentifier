@@ -20,6 +20,16 @@ public class DoubleQueueTest {
         queueWithZero = new DoubleQueue(0); // queue object, with maxSize 0
     }
 
+    
+    @Test 
+    @DisplayName("Testing constructor")
+    void testConstructor() {
+        
+        // Throws --> IllegalArgumentException: Queue size must be greater than 0
+        assertThrows(IllegalArgumentException.class, () -> new DoubleQueue(-1));
+        
+    }
+
     /**
      * Tests the offer() method with the Double: 10.0. Expected result: true
      * when added to a non-full queue, false for a full queue (maxSize = 0).

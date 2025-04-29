@@ -3,17 +3,22 @@
 ## Tasks Implemented by Me
 
 - **Branch `bug_hunt`**:
-    - Took care of fixing syntax errors, type issues, and making adjustments to methods.
-    - Made improvements to the `StringQueue` class and its methods due to warnings in VSCode. 
-    - Example: Changed `element.size() == 0` to `element.isEmpty()` for better clarity and performance.
+    - Fixed syntax errors, resolved type issues, and optimized method implementations.
+    - Improved the `StringQueue` class and its methods to address warnings in VSCode.
+    - Example: Replaced `element.size() == 0` with `element.isEmpty()` to enhance readability and performance.
 
 - **Branch `double_queue`**:
-    - Created the `DoubleQueue.java` class and its corresponding `IDoubleQueue` interface.
-    - The implementation is similar to `StringQueue.java`, but designed to handle `double` values in the queue.
+    - Developed the `DoubleQueue.java` class along with the corresponding `IDoubleQueue` interface.
+    - The implementation is similar to `StringQueue.java`, but tailored to handle `double` values in the queue.
 
 - **Branch `tests`**:
-    - Developed test cases for the previously mentioned classes.
-    - Added Javadoc comments to the test classes to ensure proper documentation and readability.
+    - Implemented test cases for the previously developed classes.
+    - Added Javadoc comments to the test classes for improved documentation and clarity.
+    - Tests were written for the following classes: `StringQueueTest.java`, `DoubleQueueTest.java`, and `LiquidTest.java`.
 
- **Branch `maven_site`**:
-    - Created the `maven_site` branch to handle documentation tasks.
+- **Branch `maven_site`**:
+    - Created the `maven_site` branch to manage documentation tasks.
+    - Added developer information to pom.xml 
+
+- **Branch `queue_dzinovic`**:
+    - Created a new branch named after my last name, where I implemented the `remove()` method in `DrinkQueue.java`.

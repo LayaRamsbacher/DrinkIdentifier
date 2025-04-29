@@ -1,56 +1,60 @@
 package at.fhj.msd;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 
-public class DrinkQueue implements IQueue {
+public class DrinkQueue  {
 
-      private ArrayList<Drink> elements = new ArrayList<Drink>();
-      private int maxSize;
+      private LinkedList<Drink> elements;
+      int maxSize = 5;
 
   public DrinkQueue(int maxSize) {
+      elements = new LinkedList<>();
       this.maxSize = maxSize;
   }    
 
   public boolean offer(Drink obj)
   {
-      if (elements.size() < maxSize) {
-          elements.add(obj);
-          return true;
-      } else {
-          return false;
-      }
-  }
+    if(elements.size() > this.maxSize)
+     {
+      return false;
+    }
+    else
+    {
+      elements.add(obj);
+      return true;
+    }
+}
 
-
-      @Override
-  public String poll()
+      
+  public Drink poll()
   {
-      if (elements.isEmpty()) {
-              return null;
-      } else {
-          Drink firstElement = elements.get(0);
-          elements.remove(0);
-          return firstElement.toString();
-      }
+      return null;
   }
 
  
-      @Override
-  public String remove()
+     
+  public Drink remove()
   {
+
+    return elements.remove();
       
   }
 
    
-  public String peek()
+  public Drink peek()
   {
-
+    if (!elements.isEmpty()) {
+      return null;
+    } else {
+      return elements.get(0);
+    }
+    
   }
 
   
-  public String element()
+  public Drink element()
   {
-
+    return null;
   }
 
 }

@@ -26,8 +26,7 @@ public class DrinkQueue {
         if (elements.isEmpty()) {
             return null;
         }
-        elements.remove(0);
-        return elements.get(0);
+        return elements.remove(0);
     }
 
     public Drink remove() {
@@ -42,12 +41,10 @@ public class DrinkQueue {
     }
 
     public Drink peek() {
-        if (!elements.isEmpty()) {
+        if (elements.isEmpty()) {
             return null;
-        } else {
-            return elements.get(0);
         }
-
+        return elements.get(0);
     }
 
     /*

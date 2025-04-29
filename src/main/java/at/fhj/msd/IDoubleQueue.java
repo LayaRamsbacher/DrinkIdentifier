@@ -1,6 +1,8 @@
 package at.fhj.msd;
 
-
+/**
+ * The interface for the DoubleQueue.java Class 
+ */
 public interface IDoubleQueue{
   
   public abstract boolean offer(Double obj);

@@ -21,4 +21,4 @@
     - Added developer information to pom.xml 
 
 - **Branch `queue_dzinovic`**:
-    - Created a new branch named after my last name, where I implemented the `remove()` method in `DrinkQueue.java`.
+    - Created a new branch named after my last name, where I implemented the `remove()` and `element()` methods in `DrinkQueue.java`.

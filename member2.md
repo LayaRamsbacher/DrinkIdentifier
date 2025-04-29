@@ -19,4 +19,3 @@
 
 - **branch ``maven_site``** 
       - Writing this documentation on what I (and my other Team-Members) had to do
-

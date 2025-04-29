@@ -26,7 +26,8 @@ public class DrinkQueue {
         if (elements.isEmpty()) {
             return null;
         }
-        return elements.poll();
+        elements.remove(0);
+        return elements.get(0);
     }
 
     public Drink remove() {

@@ -19,6 +19,11 @@ public class DoubleQueue implements IDoubleQueue {
      *  @param int maxSize
      */
     public DoubleQueue(int maxSize) {
+
+        if (maxSize < 0) {
+            throw new IllegalArgumentException("Queue size must be 0 or greater!");
+        }
+
         this.maxSize = maxSize;
     }
 
@@ -30,7 +35,7 @@ public class DoubleQueue implements IDoubleQueue {
      */
     @Override
     public boolean offer(Double obj) {
-        if (elements.size() != maxSize) {
+        if (elements.size() < maxSize) {
             elements.add(obj);
         } else {
             return false;
@@ -44,13 +49,13 @@ public class DoubleQueue implements IDoubleQueue {
      */
     @Override
     public Double poll() {
-      Double element = peek();
-  
-      if (!elements.isEmpty()) {
-        elements.remove(0);
-      }
-  
-      return element;
+        Double element = peek();
+
+        if (!elements.isEmpty()) {
+            elements.remove(0);
+        }
+
+        return element;
     }
 
     /**
@@ -98,5 +103,5 @@ public class DoubleQueue implements IDoubleQueue {
         }
         return element;
     }
-    
+
 }

@@ -20,6 +20,15 @@ public class StringQueueTest {
         queueWithZero = new StringQueue(0); // queue object, with maxSize 0
     }
 
+    @Test 
+    @DisplayName("Testing constructor")
+    void testConstructor() {
+        
+        // Throws --> IllegalArgumentException: Queue size must be greater than 0
+        assertThrows(IllegalArgumentException.class, () -> new StringQueue(-1));
+        
+    }
+
     /**
      * Tests the offer() method with the String: "Hello".
      * Expected result: true when added to a non-full queue, false for a full queue (maxSize = 0).

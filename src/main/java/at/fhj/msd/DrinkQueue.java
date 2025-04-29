@@ -1,26 +1,34 @@
 package at.fhj.msd;
 
 import java.util.LinkedList;
-import java.util.Queue;
 
 public class DrinkQueue  {
 
-      private Queue<Drink> elements;
+      private LinkedList<Drink> elements;
+      int maxSize = 5;
 
-  public DrinkQueue() {
+  public DrinkQueue(int maxSize) {
       elements = new LinkedList<>();
+      this.maxSize = maxSize;
   }    
 
   public boolean offer(Drink obj)
   {
+    if(elements.size() > this.maxSize)
+     {
       return false;
-  }
-
+    }
+    else
+    {
+      elements.add(obj);
+      return true;
+    }
+}
 
       
-  public String poll()
+  public Drink poll()
   {
-      return "";
+      return null;
   }
 
  
@@ -33,15 +41,20 @@ public class DrinkQueue  {
   }
 
    
-  public String peek()
+  public Drink peek()
   {
-    return "";
+    if (!elements.isEmpty()) {
+      return null;
+    } else {
+      return elements.get(0);
+    }
+    
   }
 
   
-  public String element()
+  public Drink element()
   {
-    return "";
+    return null;
   }
 
 }

@@ -37,7 +37,7 @@ public class Cocktail extends  Drink {
               for (Liquid l : liquid) {
                      summedalcohol += l.getAlcoholPercent();
               }
-                  return summedalcohol > 0;
+              return (summedalcohol / liquid.size()) > 0;
        }
 
 
